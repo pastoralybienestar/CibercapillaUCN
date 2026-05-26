@@ -19,6 +19,44 @@
                 radial-gradient(circle at 95% 90%, rgba(2, 128, 174, 0.06) 0%, transparent 30%),
                 radial-gradient(circle at 50% 50%, rgba(245, 158, 11, 0.02) 0%, transparent 60%);
         }
+
+        /* --- BARRA DE SCROLL: FINA, ESTÉTICA Y CREATIVA (#3B2D5B) --- */
+        html {
+            scrollbar-width: thin; /* Versión delgada para Firefox */
+            scrollbar-color: #3b2d5b transparent; /* Pista transparente */
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px; /* Ancho general del área interactiva */
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: transparent; /* Pista invisible para mayor limpieza */
+            margin: 16px 0; /* Crea un margen superior e inferior para que la barra no toque las esquinas */
+        }
+
+        ::-webkit-scrollbar-thumb {
+            /* Degradado volumétrico con tu color #3B2D5B */
+            background: linear-gradient(to bottom, #4e3c73, #3b2d5b, #291f40);
+            border-radius: 10px;
+            /* El borde transparente actúa como un margen interno, haciendo que la barra se vea más delgada y "flote" */
+            border: 3px solid transparent; 
+            background-clip: padding-box; 
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            /* Se ilumina y se expande levemente (de 3px de borde transparente a 2px) */
+            background: linear-gradient(to bottom, #624c8f, #4e3c73, #3b2d5b);
+            border: 2px solid transparent; 
+            background-clip: padding-box;
+        }
+
+        ::-webkit-scrollbar-thumb:active {
+            /* Color profundo al arrastrar, ocupando casi todo el ancho */
+            background: linear-gradient(to bottom, #3b2d5b, #291f40, #181126);
+            border: 1px solid transparent; 
+            background-clip: padding-box;
+        }
         
         .font-sans { font-family: 'Inter', sans-serif; }
         
