@@ -149,6 +149,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .group:hover .emoji-3d {
             transform: scale(1.2) translateY(-3px) rotate(-5deg);
         }
+
+        /* Utilidad para la sección oscura de Eucaristía */
+        .bg-pattern-dark {
+            background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
     </style>
 </head>
 <body class="min-h-screen pb-24">
@@ -258,48 +264,107 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 </div>
             </section>
 
-            <section id="tab-eucaristia" class="hidden-tab max-w-4xl mx-auto space-y-8 animate-fade-in">
-                <div class="p-12 rounded-[3rem] bg-white border border-stone-100 text-center shadow-2xl card-creative">
-                    <div class="w-20 h-20 bg-gradient-to-br from-amber-50 to-amber-100 rounded-full flex items-center justify-center mx-auto mb-8 border border-amber-200 shadow-inner">
-                        <i data-lucide="video" class="text-amber-600 w-10 h-10"></i>
-                    </div>
-                    <h2 class="text-4xl font-serif italic mb-2 text-gradient-gold">La Santa Eucaristía</h2>
-                    <p class="text-stone-500 font-sans text-sm font-bold uppercase tracking-wider mb-8">Transmisión en Vivo</p>
-                    
-                    <div class="bg-stone-50 p-8 rounded-3xl border border-stone-200 mb-8 inline-block w-full max-w-2xl">
-                        <div class="mb-8">
-                            <p class="text-4xl font-black text-stone-800 font-sans mb-1">12:00 m. (Col)</p>
-                            <p class="text-amber-600 font-bold uppercase tracking-widest text-xs">Todos los días</p>
-                        </div>
+            <section id="tab-eucaristia" class="hidden-tab max-w-5xl mx-auto space-y-12 animate-fade-in">
+                <!-- Bloque 1: Top Claro - Invitación a Intenciones y Facebook -->
+                <div class="relative rounded-[3rem] bg-white overflow-hidden shadow-xl border border-amber-100 card-creative">
+                    <!-- Decorative background elements -->
+                    <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-amber-300 via-amber-500 to-amber-300"></div>
+                    <div class="absolute top-0 right-0 -mt-20 -mr-20 w-64 h-64 bg-amber-50 rounded-full blur-3xl opacity-60 pointer-events-none"></div>
+                    <div class="absolute bottom-0 left-0 -mb-20 -ml-20 w-64 h-64 bg-blue-50 rounded-full blur-3xl opacity-60 pointer-events-none"></div>
+
+                    <div class="p-10 md:p-16 text-center relative z-10 flex flex-col items-center">
+                        <div class="text-7xl emoji-3d mb-6 drop-shadow-xl">⛪</div>
                         
-                        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-                            <a href="https://www.facebook.com/SoyCatolicaDelNorte" target="_blank" class="flex items-center justify-center gap-3 bg-[#1877F2] hover:bg-blue-700 text-white px-8 py-4 rounded-2xl text-sm font-bold shadow-lg shadow-blue-200 transition-all font-sans transform hover:-translate-y-1 hover:scale-105">
-                                <i data-lucide="facebook"></i> Ver en Facebook
-                            </a>
-                            <a href="https://encuestas.ucn.edu.co/index.php/819977" target="_blank" class="flex items-center justify-center gap-3 bg-stone-800 hover:bg-black text-white px-8 py-4 rounded-2xl text-sm font-bold shadow-lg shadow-stone-200 transition-all font-sans transform hover:-translate-y-1 hover:scale-105">
-                                <i data-lucide="pencil"></i> Enviar Intenciones
-                            </a>
+                        <h2 class="text-4xl md:text-5xl font-serif italic mb-4 text-gradient-gold drop-shadow-sm">La Santa Eucaristía</h2>
+                        <p class="text-stone-600 font-serif text-lg md:text-xl max-w-3xl mx-auto leading-relaxed mb-8">
+                            Antes de participar en el banquete del Señor, te invitamos a depositar tus intenciones en el altar. Únete a nuestra transmisión y vive la fe en comunidad.
+                        </p>
+
+                        <div class="flex items-center justify-center gap-3 mb-10 text-amber-700 font-sans bg-amber-50 px-6 py-2 rounded-full border border-amber-100 shadow-sm">
+                            <i data-lucide="clock" class="w-4 h-4"></i>
+                            <span class="text-xs md:text-sm font-bold uppercase tracking-widest">Lunes a Domingo • 12:00 m. (Col)</span>
                         </div>
 
-                        <div class="border-t border-stone-200 pt-6">
-                            <p class="text-stone-600 italic font-serif text-lg">"Yo soy el pan vivo que ha bajado del cielo; el que coma de este pan vivirá para siempre."</p>
-                            <p class="text-xs text-stone-400 font-bold mt-2 uppercase tracking-widest">(Jn 6, 51)</p>
-                        </div>
-                    </div>
-                    
-                    <div class="mt-8 rounded-2xl overflow-hidden shadow-lg border border-stone-200">
-                        <div class="relative w-full pb-[56.25%] bg-black">
-                            <iframe class="absolute top-0 left-0 w-full h-full" 
-                                src="https://www.youtube.com/embed/5JnbvMzIyDk" 
-                                title="La Eucaristía" 
-                                frameborder="0" 
-                                loading="lazy"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                                allowfullscreen>
-                            </iframe>
+                        <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                            <a href="https://encuestas.ucn.edu.co/index.php/819977" target="_blank" class="flex items-center justify-center gap-3 bg-stone-800 hover:bg-stone-900 text-white px-8 py-4 rounded-2xl text-sm font-bold shadow-lg shadow-stone-300 transition-all font-sans uppercase tracking-wider hover:-translate-y-1 hover:scale-105 border border-stone-700 w-full sm:w-auto">
+                                <i data-lucide="pencil" class="w-5 h-5 text-amber-400"></i> Escribir Intenciones
+                            </a>
+                            <a href="https://www.facebook.com/SoyCatolicaDelNorte" target="_blank" class="flex items-center justify-center gap-3 bg-[#1877F2] hover:bg-[#166FE5] text-white px-8 py-4 rounded-2xl text-sm font-bold shadow-lg shadow-blue-200 transition-all font-sans uppercase tracking-wider hover:-translate-y-1 hover:scale-105 w-full sm:w-auto">
+                                <i data-lucide="facebook" class="w-5 h-5"></i> Unirse en Facebook
+                            </a>
                         </div>
                     </div>
                 </div>
+
+                <!-- Bloque 2: Comunión Espiritual (Full width, creative) -->
+                <div class="max-w-4xl mx-auto p-10 md:p-14 bg-gradient-to-br from-red-50 via-white to-amber-50 rounded-[3rem] border border-red-100 text-center shadow-lg card-creative relative overflow-hidden">
+                    <i data-lucide="quote" class="absolute top-6 left-6 w-16 h-16 text-red-100 opacity-50"></i>
+                    <div class="relative z-10 flex flex-col items-center">
+                        <div class="text-6xl emoji-3d mb-6 drop-shadow-md">🕊️</div>
+                        <h3 class="text-2xl md:text-3xl font-bold text-stone-800 mb-2 font-sans uppercase tracking-widest">Comunión Espiritual</h3>
+                        <p class="text-[10px] uppercase tracking-[0.2em] font-black text-amber-600 mb-8 font-sans">San Alfonso María de Ligorio</p>
+                        
+                        <p class="italic text-stone-700 text-xl md:text-2xl leading-relaxed font-serif max-w-3xl">
+                            "Creo, Jesús mío, que estás real y verdaderamente en el cielo y en el Santísimo Sacramento del Altar. Te amo sobre todas las cosas y deseo vivamente recibirte dentro de mi alma, pero no pudiendo hacerlo ahora sacramentalmente, ven al menos espiritualmente a mi corazón. Y como si ya te hubiese recibido, te abrazo y me uno del todo a Ti. Señor, no permitas que jamás me aparte de Ti. Amén."
+                        </p>
+
+                        <div class="mt-10 flex flex-col items-center gap-4">
+                            <button onclick="toggleAmen('amen-espiritual')" class="group flex items-center justify-center w-14 h-14 rounded-full bg-white border border-stone-200 hover:border-red-400 hover:scale-105 transition-all shadow-md">
+                                <i data-lucide="flame" class="w-6 h-6 text-red-500 fill-red-500 animate-pulse"></i>
+                            </button>
+                            <span id="amen-espiritual" class="hidden text-red-700 font-black uppercase tracking-widest text-sm animate-fade-in">Amén</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bloque 3: Guía de Participación (Row grid) -->
+                <div class="max-w-5xl mx-auto">
+                    <div class="text-center mb-10">
+                        <h3 class="text-3xl md:text-4xl font-serif italic text-stone-800 mb-3">Guía para Vivir la Eucaristía</h3>
+                        <p class="text-xs md:text-sm uppercase tracking-widest text-stone-400 font-black font-sans">Preparación del corazón y del entorno en casa</p>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-3 gap-6 md:gap-8">
+                        <div class="bg-white p-8 md:p-10 rounded-[2.5rem] border border-stone-200 shadow-md card-creative text-center group flex flex-col items-center">
+                            <div class="text-5xl emoji-3d mb-6 group-hover:scale-110 transition-transform">🕯️</div>
+                            <h4 class="font-bold text-stone-800 font-sans text-lg mb-4">Prepara el ambiente</h4>
+                            <p class="text-stone-600 font-serif leading-relaxed text-base">Busca un lugar tranquilo en tu hogar. Puedes colocar un crucifijo, una imagen mariana o encender una pequeña vela.</p>
+                        </div>
+                        <div class="bg-white p-8 md:p-10 rounded-[2.5rem] border border-stone-200 shadow-md card-creative text-center group flex flex-col items-center">
+                            <div class="text-5xl emoji-3d mb-6 group-hover:scale-110 transition-transform">🔕</div>
+                            <h4 class="font-bold text-stone-800 font-sans text-lg mb-4">Evita distracciones</h4>
+                            <p class="text-stone-600 font-serif leading-relaxed text-base">Silencia tu teléfono móvil, apaga otras pantallas y trata de concentrarte como si estuvieras presencialmente en el templo.</p>
+                        </div>
+                        <div class="bg-white p-8 md:p-10 rounded-[2.5rem] border border-stone-200 shadow-md card-creative text-center group flex flex-col items-center">
+                            <div class="text-5xl emoji-3d mb-6 group-hover:scale-110 transition-transform">🙏</div>
+                            <h4 class="font-bold text-stone-800 font-sans text-lg mb-4">Participa activamente</h4>
+                            <p class="text-stone-600 font-serif leading-relaxed text-base">Responde a las oraciones, ponte de pie durante el Evangelio y realiza la Comunión Espiritual con profunda devoción.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bloque 4: Video Formativo Grande sin fondo oscuro -->
+                <div class="max-w-5xl mx-auto bg-white p-6 md:p-10 rounded-[3rem] shadow-xl relative overflow-hidden mt-16 border border-stone-200 card-creative group">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-300 via-amber-400 to-blue-300"></div>
+                    <div class="absolute -top-32 -right-32 w-64 h-64 bg-amber-100 rounded-full blur-3xl opacity-40 pointer-events-none"></div>
+                    
+                    <div class="relative z-10 text-center pt-4 pb-8 px-4">
+                        <div class="text-5xl emoji-3d mb-4">🎬</div>
+                        <h4 class="text-2xl md:text-4xl font-serif italic text-stone-800 mb-3 drop-shadow-sm text-gradient-gold">Conoce más sobre la Santa Misa</h4>
+                        <p class="text-xs font-black text-stone-400 uppercase tracking-[0.3em] font-sans">Video formativo explicativo</p>
+                    </div>
+
+                    <div class="rounded-[2rem] overflow-hidden shadow-lg border border-stone-100 relative w-full pb-[56.25%] bg-stone-50 z-10 group-hover:shadow-2xl group-hover:border-amber-200 transition-all duration-500">
+                        <iframe class="absolute top-0 left-0 w-full h-full" 
+                            src="https://www.youtube.com/embed/5JnbvMzIyDk" 
+                            title="Guía de la Eucaristía" 
+                            frameborder="0" 
+                            loading="lazy"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+
             </section>
 
             <section id="tab-confesion" class="hidden-tab max-w-6xl mx-auto space-y-16 animate-fade-in">
