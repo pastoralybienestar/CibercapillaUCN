@@ -164,6 +164,18 @@
         .door-open-right { transform: rotateY(105deg); }
         .door-handle { width: 2.5rem; height: 2.5rem; border-radius: 50%; background: linear-gradient(to bottom right, var(--amber-400), var(--amber-700)); border: 2px solid var(--amber-900); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); }
 
+        #doorOverlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 100;
+            display: flex;
+            background-color: var(--stone-950);
+            perspective: 2000px;
+        }
+
         .hero-banner { position: relative; height: 16rem; border-radius: 2.5rem; overflow: hidden; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); background: var(--stone-900); margin: 2rem auto; max-width: 72rem; }
         @media (min-width: 768px) { .hero-banner { height: 20rem; } }
         .hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.9; transition: opacity 1s, transform 2s; }
